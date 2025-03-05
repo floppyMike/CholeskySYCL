@@ -1,0 +1,72 @@
+---------------------------------------DOUBLE--------------------------------------------
+
+---------------------------------------
+Matrix Multiplication
+
+Naive:
+Time: 16936307999ns
+Time: 16965981775ns
+Time: 16966933753ns
+Time: 16997396522ns
+
+Naive (Bad Global Memory Coalescence):
+Time: 36496568667ns
+Time: 36416282907ns
+Time: 36430114562ns
+Time: 36427870119ns
+
+Memory Caching:
+Time: 17709848182ns
+Time: 17471056517ns
+Time: 17469967626ns
+Time: 17470261154ns
+
+---------------------------------------
+Cholesky Decomposition
+
+Naive
+Time: 47649174266ns (47.6492s)
+Time: 47297568009ns (47.2976s)
+
+Naive (N * Sqrt)
+Time: 22467533171ns (22.4675s)
+Time: 22137214061ns (22.1372s)
+
+Naive (Upper Triangle Matrix)
+Time: 23850030631ns (23.85s)
+Time: 23518178244ns (23.5182s)
+
+Full Parallel (Linear Diagonal)
+Time: 5500656326ns (5.50066s)
+Time: 5184218924ns (5.18422s)
+
+Full Parallel (if statement)
+Time: 2673588114ns (2.67359s)
+Time: 2349299091ns (2.3493s)
+
+Triangle Memory (if statement)
+Time: 2807550348ns (2.80755s)
+Time: 2363097619ns (2.3631s)
+
+---------------------------------------
+Cholesky Decomposition with Forward & Backward Substitution
+
+Triangle Memory
+Time: 2996616498ns (2.99662s)
+Time: 2478514713ns (2.47851s)
+
+---------------------------------------FLOAT---------------------------------------------
+
+---------------------------------------
+Cholesky Decomposition with Triangle Memory (No Shared Memory)
+
+Time: 1736093502ns (1.73609s)
+Time: 1474302764ns (1.4743s)
+Time: 1473601195ns (1.4736s)
+
+---------------------------------------
+Cholesky Decomposition with Padded Triangle Memory (Shared Memory)
+
+Time: 332410845ns (0.332411s)
+Time: 320099416ns (0.320099s)
+Time: 320176003ns (0.320176s)
